@@ -26,6 +26,8 @@ public class UIScript : MonoBehaviour
     void Start()
     {
         Debug.Log("UIScript initialized");
+        disconnectPi.interactable = false;
+        startTest.interactable = false;
     }
     // Update is called once per frame
     void Update()
@@ -58,33 +60,34 @@ public class UIScript : MonoBehaviour
     {
         pythonResult.text = "Python Connected!";
         pythonConnected = true;
-        if(pythonConnected && piConnected) startTest.enabled = true;
+        if(pythonConnected && piConnected) startTest.interactable = true;
     }
 
     public void OnPythonFailConnect()
     {
         pythonResult.text = "Python Failed Connect!";
         pythonConnected = false;
-        startTest.enabled = false;
+        startTest.interactable = false;
     }
 
     public void OnPiConnect()
     {
         piResult.text = "Pi Connected!";
         piConnected = true;
-        if(pythonConnected && piConnected) startTest.enabled = true;
+        disconnectPi.interactable = true;
+        if(pythonConnected && piConnected) startTest.interactable = true;
     }
 
     public void OnPiFailConnect()
     {
         piResult.text = "Pi Failed Connect!";
         piConnected = false;
-        startTest.enabled = false;
+        startTest.interactable = false;
     }
 
     public void StartClicked()
     {
-        mainImg.enabled = false;
-        robotManager.enabled = true;
+        mainImg.gameObject.SetActive(false);
+        robotManager.gameObject.SetActive(true);
     }
 }

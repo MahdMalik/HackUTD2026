@@ -972,7 +972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &743775757
 Transform:
   m_ObjectHideFlags: 0
@@ -1003,6 +1003,8 @@ MonoBehaviour:
   pythonSide: {fileID: 1676406497}
   piSide: {fileID: 2073632590}
   videoDisplay: {fileID: 927646006}
+  deadzone: 0.15
+  sendRate: 30
 --- !u!1 &777983294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &927646006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1949,7 +1951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1812783737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2084,6 +2086,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1470279098769358944, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
@@ -2130,6 +2136,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2449787133337329425, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_EnableUIInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167925059111895691, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2231,7 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab460f2f59f7beb4bbe63d1af5a397e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PiConnection
-  piURL: ws://10.176.226.211:6767
+  piURL: ws://10.222.215.90:6767
   uiScript: {fileID: 1726639373}
 --- !u!4 &2073632591
 Transform:

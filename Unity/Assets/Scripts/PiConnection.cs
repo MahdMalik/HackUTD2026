@@ -61,6 +61,12 @@ public class PiConnection : MonoBehaviour
         }
     }
 
+    public async void SendDrive(string json)
+    {
+        if (piSocket != null && piSocket.State == WebSocketState.Open)
+            await piSocket.SendText(json);
+    }
+
     public async void DisconnectPi()
     {
         if (piSocket != null)

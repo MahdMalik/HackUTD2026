@@ -10,6 +10,7 @@ public class PiConnection : MonoBehaviour
     public UIScript uiScript;
 
     private WebSocket piSocket;
+    public event Action<byte[]> OnFrameReceived;
 
     private void Update()
     {
@@ -44,6 +45,11 @@ public class PiConnection : MonoBehaviour
             {
                 Debug.Log("Pi disconnected.");
                 uiScript.OnPiFailConnect();
+            };
+
+            piSocket.OnMessage += (bytes) =>
+            {
+                OnFrameReceived?.Invoke(bytes);
             };
 
             await piSocket.Connect();

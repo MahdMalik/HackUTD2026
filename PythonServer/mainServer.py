@@ -24,7 +24,7 @@ async def main():
         6768
     )
 
-    print("Python WebSocket server running on port 8765")
+    print("Python WebSocket server running on port 6768")
     print("Waiting for Unity to connect...")
 
     await server.wait_closed()

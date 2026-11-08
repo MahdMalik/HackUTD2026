@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class PythonConnection : MonoBehaviour
 {
-    public string pythonURL = "ws://192.168.1.100:6767";
+    public string pythonURL = "ws://10.222.215.168:6768";
 
     public UIScript uiScript;
 

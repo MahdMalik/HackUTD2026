@@ -5,7 +5,7 @@ using System;
 
 public class PiConnection : MonoBehaviour
 {
-    public string piURL = "ws://192.168.1.101:8766";
+    public string piURL = "ws://10.176.226.211:6767";
 
     public UIScript uiScript;
 
